@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+      <h1>RONDA NUMERO @ViewData["NumeroRonda"]</h1>
+      <h2>CATEGORIA @ViewData["NombreCategoria"]</h2>
+      <h2>NIVEL @ViewData["NivelCategoria"]</h2>
+      <h2>VALOR DEL PREMIO ESTA RONDA @ViewData["ValorPremio"] $</h2>
+      <h2>EL TIPO DE PREMIO ES @ViewData["TipoPremio"]</h2>
+      <h1> @ViewData["Info"]</h1>
+      <h1 id="pregunta">PREGUNTA</h1>
+      <h2 id="titulo">¿@ViewData["Pregunta"]?</h2>
+      <form id="formpregunta" asp-action="Panelinfo" asp-controller="Juego" method="post">
+
+          <div class="form-check">
+              <input class="form-check-input" type="radio"  name="opcion" value="@ViewData["opcion1"]" >
+              <label class="form-check-label" for="opcion" >
+                  @ViewData["opcion1"]
+              </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="opcion"  value="@ViewData["opcion2"]"  />
+              <label class="form-check-label" for="opcion"  >
+                  @ViewData["opcion2"]
+              </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="opcion"  value="@ViewData["opcion3"]" >
+              <label class="form-check-label" for="opcion" >
+                  @ViewData["opcion3"]
+              </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="opcion"  value="@ViewData["opcion4"]" >
+              <label class="form-check-label" for="opcion"  >
+                  @ViewData["opcion4"]
+              </label>
+          </div>
+          <div class="mb-3 col-xl-7">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+      </form>

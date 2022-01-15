@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>BIENVENIDO GUERRERO</h1>
+
+<div class="text-center botones ">
+    <form asp-action="Registro" asp-controller="Jugador" method="post">
+        <div class="mb-3 col-xl-7">
+            <button type="submit" class="btn btn-primary">REGISTRO</button>
+        </div>
+    </form>
+</div>
+<div class="text-center botones">
+    <form asp-action="IniciarSesion" asp-controller="Jugador" method="post">
+        <div class="mb-3 col-xl-7">
+            <button type="submit" class="btn btn-primary">INICIAR SESION</button>
+        </div>
+    </form>
+
+</div>
+
+

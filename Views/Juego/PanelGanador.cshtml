@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    var Premios = ViewBag.Premios;
+
+}
+
+<h1>@ViewData["MessajeGanador"]</h1>
+@foreach (var premio in Premios)
+{
+
+    <h2>EL TIPO DE PREMIO QUE HAS GANADO ES @premio.valorpremio Y EL VALOR ES @premio.premioRonda </h2>
+
+}
+<div class="text-center botones">
+    <form asp-action="Salir" asp-controller="Juego" method="post">
+        <div class="mb-3 col-xl-7">
+            <button type="submit" class="btn btn-primary">SALIR</button>
+        </div>
+    </form>
+
+</div>
